@@ -52,15 +52,55 @@ struct ARViewContainer: UIViewRepresentable {
     class Coordinator: NSObject, ARSessionDelegate {
         weak var view: ARView?
         var focusEntity: FocusEntity?
-
+        var diceEntity: ModelEntity?
+        
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
             guard let view = self.view else { return }
             debugPrint("Âncoras na cena: ", anchors)
             self.focusEntity = FocusEntity(on: view, style: .classic(color: .yellow))
         }
+        
+        //Ação aparecer dado
+        @objc func handleTap() {
+            guard let view = self.view, let focusEntity = self.focusEntity else { return }
+            
+            if let diceEntity = self.diceEntity {
+                // Rolagem do dado
+                diceEntity.addForce([0, 4, 0], relativeTo: nil)
+                diceEntity.addTorque([Float.random(in: 0 ... 0.4), Float.random(in: 0 ... 0.4), Float.random(in: 0 ... 0.4)], relativeTo: nil)
+            } else {
+                // Criando âncora
+                let anchor = AnchorEntity()
+                view.scene.anchors.append(anchor)
+                
+                // Adicionando o dado
+                let diceEntity = try! ModelEntity.loadModel(named: "Dice")
+                diceEntity.scale = [0.1, 0.1, 0.1]
+                diceEntity.position = focusEntity.position
+                
+                // Adicionando a física
+                let size = diceEntity.visualBounds(relativeTo: diceEntity).extents
+                let boxShape = ShapeResource.generateBox(size: size)
+                diceEntity.collision = CollisionComponent(shapes: [boxShape])
+                diceEntity.physicsBody = PhysicsBodyComponent(massProperties: .init(shape: boxShape, mass: 50), material: nil, mode: .dynamic)
+                
+                // Adicionando o plano
+                let planeMesh = MeshResource.generatePlane(width: 2, depth: 2)
+                let material = SimpleMaterial(color: .init(white: 1, alpha: 0.1), isMetallic: false)
+                let planeEntity = ModelEntity(mesh: planeMesh, materials: [material])
+                planeEntity.position = focusEntity.position
+                planeEntity.physicsBody = PhysicsBodyComponent(massProperties: .default, material: nil, mode: .static)
+                planeEntity.collision = CollisionComponent(shapes: [.generateBox(width: 2, height: 0.001, depth: 2)])
+                
+                anchor.addChild(planeEntity)
+                
+                self.diceEntity = diceEntity
+                anchor.addChild(diceEntity)
+            }
+        }
     }
-    
 }
+
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
