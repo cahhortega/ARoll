@@ -8,11 +8,37 @@
 import SwiftUI
 import RealityKit
 import ARKit
-import FocusEntity
 
 struct ContentView: View {
+    @State var isPopUpOpen = false
     var body: some View {
-        return ARViewContainer().ignoresSafeArea()
+        NavigationView {
+            ZStack {
+                ARViewContainer().ignoresSafeArea()
+                VStack {
+                    Text(" ")
+                        .navigationBarItems(trailing:
+                                                Button(action: {
+                            print("Settings")
+                            isPopUpOpen.toggle()
+                        }, label: {
+                            Text("Settings")
+                                .foregroundColor(.blue)
+                            Image(systemName: "gearshape.fill")
+                                .foregroundColor(.blue)
+                                .scaledToFit()
+                        })
+                        )
+                    
+                    
+                }
+                if isPopUpOpen {
+                    PopUpComponent(isOpen: $isPopUpOpen)
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+        }
+        
     }
 }
 
@@ -38,6 +64,9 @@ struct ARViewContainer: UIViewRepresentable {
         context.coordinator.view = arView
         session.delegate = context.coordinator
         
+        //Adicionando toque
+        arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleTap)))
+        
         return arView
         
     }
@@ -51,18 +80,21 @@ struct ARViewContainer: UIViewRepresentable {
     
     class Coordinator: NSObject, ARSessionDelegate {
         weak var view: ARView?
-        var focusEntity: FocusEntity?
+//        var focusEntity: Entity?
         var diceEntity: ModelEntity?
         
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
             guard let view = self.view else { return }
             debugPrint("Âncoras na cena: ", anchors)
-            self.focusEntity = FocusEntity(on: view, style: .classic(color: .yellow))
+            
+//            self.focusEntity = try! Experience.loadBox().steelBox
         }
         
         //Ação aparecer dado
         @objc func handleTap() {
-            guard let view = self.view, let focusEntity = self.focusEntity else { return }
+            //            guard let view = self.view, let focusEntity = self.focusEntity else { return }
+            guard let view = self.view else { return }
+            
             
             if let diceEntity = self.diceEntity {
                 // Rolagem do dado
@@ -76,7 +108,7 @@ struct ARViewContainer: UIViewRepresentable {
                 // Adicionando o dado
                 let diceEntity = try! ModelEntity.loadModel(named: "Dice")
                 diceEntity.scale = [0.1, 0.1, 0.1]
-                diceEntity.position = focusEntity.position
+                //                diceEntity.position = focusEntity.position
                 
                 // Adicionando a física
                 let size = diceEntity.visualBounds(relativeTo: diceEntity).extents
@@ -88,7 +120,7 @@ struct ARViewContainer: UIViewRepresentable {
                 let planeMesh = MeshResource.generatePlane(width: 2, depth: 2)
                 let material = SimpleMaterial(color: .init(white: 1, alpha: 0.1), isMetallic: false)
                 let planeEntity = ModelEntity(mesh: planeMesh, materials: [material])
-                planeEntity.position = focusEntity.position
+                //                planeEntity.position = focusEntity.position
                 planeEntity.physicsBody = PhysicsBodyComponent(massProperties: .default, material: nil, mode: .static)
                 planeEntity.collision = CollisionComponent(shapes: [.generateBox(width: 2, height: 0.001, depth: 2)])
                 
