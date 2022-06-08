@@ -19,11 +19,14 @@ struct PopUpComponent: View {
                 .fontWeight(.bold)
                 .padding(.top, 35.0)
                 .padding(.bottom, 10.0)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
             
             Text("Number of sides")
                 .font(.title2)
                 .fontWeight(.semibold)
                 .lineLimit(0)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+
             //Spacer()
             Picker("Select the number of sides", selection: $selectedDice) {
                 ForEach(dataArray, id: \.self) {
@@ -34,6 +37,8 @@ struct PopUpComponent: View {
                 .font(.title2)
                 .fontWeight(.semibold)
                 .lineLimit(0)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+
             
             VStack (alignment: .center) {
                 HStack(alignment: .center, spacing: 10) {
