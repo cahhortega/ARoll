@@ -8,30 +8,17 @@
 import SwiftUI
 import RealityKit
 import ARKit
-
+import FocusEntity
 
 struct ContentView: View {
     @State var isPopUpOpen = false
+    var arViewContainer = ARViewContainer()
     var body: some View {
         NavigationView {
             ZStack {
                 ARViewContainer().ignoresSafeArea()
                 VStack {
-                    Spacer()
-                    VStack {
-                    Image(systemName: "dice.fill")
-                        .padding(.bottom, 1.0)
-                        .foregroundColor(Color.white)
-                    Text("Roll!")
-                        .fontWeight(.medium)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color.white)
-                    }
-                    .padding(.horizontal, 22.0)
-                    .padding(.vertical, 15.0)
-                    .background(Color.blue)
-                    .cornerRadius(/*@START_MENU_TOKEN@*/40.0/*@END_MENU_TOKEN@*/)
-                        Text(" ")
+                    Text(" ")
                         .navigationBarItems(trailing:
                                                 Button(action: {
                             print("Settings")
@@ -58,7 +45,7 @@ struct ContentView: View {
 }
 
 struct ARViewContainer: UIViewRepresentable {
-    
+    var button: UIButton = UIButton(type: .custom)
     func makeUIView(context: Context) -> ARView {
         let arView = ARView()
         
@@ -80,8 +67,26 @@ struct ARViewContainer: UIViewRepresentable {
         session.delegate = context.coordinator
         
         //Adicionando toque
-        arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleTap)))
+        arView.addSubview(button)
+        button.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleTap)))
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Roll! ", for: .normal)
+        button.tintColor = .white
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 50
+        button.titleLabel?.numberOfLines = 0
+        button.contentVerticalAlignment = .center
+        button.contentHorizontalAlignment = .center
+        button.semanticContentAttribute = .forceRightToLeft
         
+        button.setImage(UIImage(systemName: "dice.fill"), for: .normal)
+        button.centerXAnchor.constraint(equalTo: arView.centerXAnchor).isActive = true
+        button.centerYAnchor.constraint(equalTo: arView.centerYAnchor, constant: 300).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 100).isActive = true
+
+        
+
         return arView
         
     }
@@ -95,39 +100,20 @@ struct ARViewContainer: UIViewRepresentable {
     
     class Coordinator: NSObject, ARSessionDelegate {
         weak var view: ARView?
-//        var focusEntity: Entity?
+        var focusEntity: Entity?
         var diceEntity: ModelEntity?
         var planeId: UUID?
         var plane: AnchorEntity?
         
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
             guard let view = self.view else { return }
-            guard let planeAnchor = anchors.first as? ARPlaneAnchor else {
-                return
-            }
-            planeId = planeAnchor.identifier
-            
-            let newPlaneAnchor = AnchorEntity(world: planeAnchor.center)
-            plane = newPlaneAnchor
-            var material = SimpleMaterial()
-            material.metallic = MaterialScalarParameter(floatLiteral: 1)
-            material.roughness = MaterialScalarParameter(floatLiteral: 0)
-            
-            let plane = ModelEntity(mesh: .generatePlane(width: planeAnchor.extent.x, height: planeAnchor.extent.y), materials: [material])
-            newPlaneAnchor.addChild(plane)
-            view.scene.anchors.append(newPlaneAnchor)
-            
-            
-            debugPrint("Âncoras na cena: ", anchors)
-            
-//            self.focusEntity = try! Experience.loadBox().steelBox
+            debugPrint("Ancoras adicionas na cena: ", anchors)
+            self.focusEntity = FocusEntity(on: view, style: .classic(color: .yellow))
         }
         
         //Ação aparecer dado
         @objc func handleTap() {
-            //            guard let view = self.view, let focusEntity = self.focusEntity else { return }
-            guard let view = self.view else { return }
-            
+            guard let view = self.view, let focusEntity = self.focusEntity else { return }
             
             if let diceEntity = self.diceEntity {
                 // Rolagem do dado
@@ -139,11 +125,11 @@ struct ARViewContainer: UIViewRepresentable {
                 view.scene.anchors.append(anchor)
                 
                 // Adicionando o dado
-                let diceEntity = try! ModelEntity.loadModel(named: "Dice")
+                let number = UserDefaults().string(forKey: "number") ?? "4 faces"
+                let diceEntity = try! ModelEntity.loadModel(named: "d\(number)-\(Dice.shared.colorDice)" )
                 diceEntity.scale = [0.1, 0.1, 0.1]
+                diceEntity.position = focusEntity.position
                 
-                diceEntity.position = plane?.position ?? SIMD3(0, 0, 0)
-
                 // Adicionando a física
                 let size = diceEntity.visualBounds(relativeTo: diceEntity).extents
                 let boxShape = ShapeResource.generateBox(size: size)
@@ -154,7 +140,7 @@ struct ARViewContainer: UIViewRepresentable {
                 let planeMesh = MeshResource.generatePlane(width: 2, depth: 2)
                 let material = SimpleMaterial(color: .init(white: 1, alpha: 0.1), isMetallic: false)
                 let planeEntity = ModelEntity(mesh: planeMesh, materials: [material])
-                //                planeEntity.position = focusEntity.position
+                planeEntity.position = focusEntity.position
                 planeEntity.physicsBody = PhysicsBodyComponent(massProperties: .default, material: nil, mode: .static)
                 planeEntity.collision = CollisionComponent(shapes: [.generateBox(width: 2, height: 0.001, depth: 2)])
                 
@@ -162,7 +148,7 @@ struct ARViewContainer: UIViewRepresentable {
                 
                 let generator = UINotificationFeedbackGenerator()
                 generator.notificationOccurred(.error)
-
+                
                 
                 self.diceEntity = diceEntity
                 anchor.addChild(diceEntity)
