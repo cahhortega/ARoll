@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ABE94E9285266F100A11B7F /* D10 in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE94E3285266ED00A11B7F /* D10 */; };
+		4ABE94EA285266F100A11B7F /* D12 in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE94E4285266EE00A11B7F /* D12 */; };
+		4ABE94EB285266F100A11B7F /* D20 in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE94E5285266EF00A11B7F /* D20 */; };
+		4ABE94EC285266F100A11B7F /* D8 in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE94E6285266F000A11B7F /* D8 */; };
+		4ABE94ED285266F100A11B7F /* D6 in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE94E7285266F000A11B7F /* D6 */; };
+		4ABE94EE285266F100A11B7F /* D4 in Resources */ = {isa = PBXBuildFile; fileRef = 4ABE94E8285266F100A11B7F /* D4 */; };
 		A0148DB828525ADF00B0869A /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0148DB728525ADF00B0869A /* Dice.swift */; };
 		A0FC3D08284F93C400E09C7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC3D07284F93C400E09C7A /* AppDelegate.swift */; };
 		A0FC3D0A284F93C400E09C7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC3D09284F93C400E09C7A /* ContentView.swift */; };
@@ -14,12 +20,17 @@
 		A0FC3D0E284F93C600E09C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0FC3D0D284F93C600E09C7A /* Assets.xcassets */; };
 		A0FC3D11284F93C600E09C7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0FC3D10284F93C600E09C7A /* Preview Assets.xcassets */; };
 		A0FC3D19284FBD1D00E09C7A /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = A0FC3D18284FBD1D00E09C7A /* FocusEntity */; };
-		A0FC3D1B284FBED300E09C7A /* Dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A0FC3D1A284FBED300E09C7A /* Dice.usdz */; };
 		A0FC3D1D284FCD7500E09C7A /* SquareColorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC3D1C284FCD7500E09C7A /* SquareColorComponent.swift */; };
 		A0FC3D1F284FE2E500E09C7A /* PopUpComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC3D1E284FE2E500E09C7A /* PopUpComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4ABE94E3285266ED00A11B7F /* D10 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = D10; sourceTree = "<group>"; };
+		4ABE94E4285266EE00A11B7F /* D12 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = D12; sourceTree = "<group>"; };
+		4ABE94E5285266EF00A11B7F /* D20 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = D20; sourceTree = "<group>"; };
+		4ABE94E6285266F000A11B7F /* D8 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = D8; sourceTree = "<group>"; };
+		4ABE94E7285266F000A11B7F /* D6 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = D6; sourceTree = "<group>"; };
+		4ABE94E8285266F100A11B7F /* D4 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = D4; sourceTree = "<group>"; };
 		A0148DB728525ADF00B0869A /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 		A0FC3D04284F93C400E09C7A /* Roll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0FC3D07284F93C400E09C7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +38,6 @@
 		A0FC3D0B284F93C400E09C7A /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		A0FC3D0D284F93C600E09C7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0FC3D10284F93C600E09C7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A0FC3D1A284FBED300E09C7A /* Dice.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = Dice.usdz; path = ../../../Downloads/Dice.usdz; sourceTree = "<group>"; };
 		A0FC3D1C284FCD7500E09C7A /* SquareColorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareColorComponent.swift; sourceTree = "<group>"; };
 		A0FC3D1E284FE2E500E09C7A /* PopUpComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +73,12 @@
 		A0FC3D06284F93C400E09C7A /* Roll */ = {
 			isa = PBXGroup;
 			children = (
-				A0FC3D1A284FBED300E09C7A /* Dice.usdz */,
+				4ABE94E8285266F100A11B7F /* D4 */,
+				4ABE94E7285266F000A11B7F /* D6 */,
+				4ABE94E6285266F000A11B7F /* D8 */,
+				4ABE94E3285266ED00A11B7F /* D10 */,
+				4ABE94E4285266EE00A11B7F /* D12 */,
+				4ABE94E5285266EF00A11B7F /* D20 */,
 				A0FC3D07284F93C400E09C7A /* AppDelegate.swift */,
 				A0FC3D09284F93C400E09C7A /* ContentView.swift */,
 				A0FC3D1C284FCD7500E09C7A /* SquareColorComponent.swift */,
@@ -148,9 +163,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ABE94E9285266F100A11B7F /* D10 in Resources */,
+				4ABE94EA285266F100A11B7F /* D12 in Resources */,
 				A0FC3D11284F93C600E09C7A /* Preview Assets.xcassets in Resources */,
+				4ABE94EB285266F100A11B7F /* D20 in Resources */,
+				4ABE94ED285266F100A11B7F /* D6 in Resources */,
+				4ABE94EE285266F100A11B7F /* D4 in Resources */,
+				4ABE94EC285266F100A11B7F /* D8 in Resources */,
 				A0FC3D0E284F93C600E09C7A /* Assets.xcassets in Resources */,
-				A0FC3D1B284FBED300E09C7A /* Dice.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
