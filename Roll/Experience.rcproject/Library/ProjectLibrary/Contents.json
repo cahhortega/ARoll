@@ -1,3 +1,332 @@
 [
-
+  {
+    "libraryIdentifier" : "59e9bce1723e14c2f211b614a05f40a2",
+    "format" : "model",
+    "displayName" : "d4-black.usdz"
+  },
+  {
+    "libraryIdentifier" : "2c7c6750859613f5e352146fcce56ad2",
+    "format" : "model",
+    "displayName" : "d4-blue.usdz"
+  },
+  {
+    "libraryIdentifier" : "0bb45033b027352e75960d45952f73a0",
+    "format" : "model",
+    "displayName" : "d4-green.usdz"
+  },
+  {
+    "libraryIdentifier" : "e261293151abf1cf6280d260c630cbd2",
+    "format" : "model",
+    "displayName" : "d4-indigo.usdz"
+  },
+  {
+    "libraryIdentifier" : "9a48b48b87a1030eecd4d57131ddc444",
+    "format" : "model",
+    "displayName" : "d4-orange.usdz"
+  },
+  {
+    "libraryIdentifier" : "42ae1c7509727c224e6e6ee63b5268c5",
+    "format" : "model",
+    "displayName" : "d4-purple.usdz"
+  },
+  {
+    "libraryIdentifier" : "8c28aefd8fd4d269d6a105c25b325340",
+    "format" : "model",
+    "displayName" : "d4-red.usdz"
+  },
+  {
+    "libraryIdentifier" : "518261bfcc3ab28bc776c0c6ceeffb20",
+    "format" : "model",
+    "displayName" : "d4-rosa.usdz"
+  },
+  {
+    "libraryIdentifier" : "cfe8c7845d61b897680d06d968f658a0",
+    "format" : "model",
+    "displayName" : "d4-teal.usdz"
+  },
+  {
+    "libraryIdentifier" : "67247c98df221bed8585a43945b3acae",
+    "format" : "model",
+    "displayName" : "d4-white.usdz"
+  },
+  {
+    "libraryIdentifier" : "b39f6d0a5ebed61fc5750e7388d05aaf",
+    "format" : "model",
+    "displayName" : "d4-yellow.usdz"
+  },
+  {
+    "libraryIdentifier" : "776e558567eab07d0116321900820a6b",
+    "format" : "model",
+    "displayName" : "d6-black.usdz"
+  },
+  {
+    "libraryIdentifier" : "214ed6d26199ed7b8ccd35c85ef13708",
+    "format" : "model",
+    "displayName" : "d6-blue.usdz"
+  },
+  {
+    "libraryIdentifier" : "72fb2e64b11959310f873155706de37c",
+    "format" : "model",
+    "displayName" : "d6-green.usdz"
+  },
+  {
+    "libraryIdentifier" : "8ffac3b51c3f6e01acbc90ecd5b8dba4",
+    "format" : "model",
+    "displayName" : "d6-indigo.usdz"
+  },
+  {
+    "libraryIdentifier" : "65066c614d534442b325153155e31505",
+    "format" : "model",
+    "displayName" : "d6-orange.usdz"
+  },
+  {
+    "libraryIdentifier" : "48383190683b06af600f80ba5f8a0263",
+    "format" : "model",
+    "displayName" : "d6-pink.usdz"
+  },
+  {
+    "libraryIdentifier" : "75002bae68d5e3d879647d94270011e6",
+    "format" : "model",
+    "displayName" : "d6-purple.usdz"
+  },
+  {
+    "libraryIdentifier" : "8705c126414e9e4cec60f6f3c24e0737",
+    "format" : "model",
+    "displayName" : "d6-red.usdz"
+  },
+  {
+    "libraryIdentifier" : "3a2721881831fdebb193a9010f7e5740",
+    "format" : "model",
+    "displayName" : "d6-teal.usdz"
+  },
+  {
+    "libraryIdentifier" : "8092aabe2e05b5e080470158cea4f065",
+    "format" : "model",
+    "displayName" : "d6-white.usdz"
+  },
+  {
+    "libraryIdentifier" : "c1f78e64ceb9b429dbae8147d7e77f06",
+    "format" : "model",
+    "displayName" : "d6-yellow.usdz"
+  },
+  {
+    "libraryIdentifier" : "66245d7f33a940115b4e8b163c9399e1",
+    "format" : "model",
+    "displayName" : "d8-black.usdz"
+  },
+  {
+    "libraryIdentifier" : "9bc94a9ebe419cd0bb01d619e9adec67",
+    "format" : "model",
+    "displayName" : "d8-blue.usdz"
+  },
+  {
+    "libraryIdentifier" : "2e6869d6f7ec1a57744bc020da3bdf36",
+    "format" : "model",
+    "displayName" : "d8-green.usdz"
+  },
+  {
+    "libraryIdentifier" : "12bb37a15b53f5a8fc80e847d47857b5",
+    "format" : "model",
+    "displayName" : "d8-indigo.usdz"
+  },
+  {
+    "libraryIdentifier" : "bf38a26e2da5f8d86cbbce18260c9ab2",
+    "format" : "model",
+    "displayName" : "d8-orange.usdz"
+  },
+  {
+    "libraryIdentifier" : "9b8fb0abd54707dee989ac2db806b2f5",
+    "format" : "model",
+    "displayName" : "d8-pink.usdz"
+  },
+  {
+    "libraryIdentifier" : "131afa23e074ee3a9ab96e7f9500635d",
+    "format" : "model",
+    "displayName" : "d8-purple.usdz"
+  },
+  {
+    "libraryIdentifier" : "fd3ea389de832ec3e3449c942e76b09d",
+    "format" : "model",
+    "displayName" : "d8-red.usdz"
+  },
+  {
+    "libraryIdentifier" : "4d21482572ccc386df7b7e2201b34870",
+    "format" : "model",
+    "displayName" : "d8-teal.usdz"
+  },
+  {
+    "libraryIdentifier" : "e7cf18c4ae924ddaaa6bb700c5928781",
+    "format" : "model",
+    "displayName" : "d8-white.usdz"
+  },
+  {
+    "libraryIdentifier" : "796ad1e87c9ef7a1b22ccc746afd0504",
+    "format" : "model",
+    "displayName" : "d8-yellow.usdz"
+  },
+  {
+    "libraryIdentifier" : "844af717e586948f2c64b3095e5d377e",
+    "format" : "model",
+    "displayName" : "d10-black.usdz"
+  },
+  {
+    "libraryIdentifier" : "81a23f24045e64c4f94f12c8ae8638a9",
+    "format" : "model",
+    "displayName" : "d10-blue.usdz"
+  },
+  {
+    "libraryIdentifier" : "0b294dd59202bbca717cf915dc63d623",
+    "format" : "model",
+    "displayName" : "d10-green.usdz"
+  },
+  {
+    "libraryIdentifier" : "e1a06bae961ad756407c167e6084c8c5",
+    "format" : "model",
+    "displayName" : "d10-indigo.usdz"
+  },
+  {
+    "libraryIdentifier" : "39193d65497e809c514aedf68fca2fc7",
+    "format" : "model",
+    "displayName" : "d10-orange.usdz"
+  },
+  {
+    "libraryIdentifier" : "b02f170b8d51c98f06fe6eca1cf38830",
+    "format" : "model",
+    "displayName" : "d10-pink.usdz"
+  },
+  {
+    "libraryIdentifier" : "e38324f7b0da012d77aa21ea1da15489",
+    "format" : "model",
+    "displayName" : "d10-purple.usdz"
+  },
+  {
+    "libraryIdentifier" : "68b0d1c54022e6a01937b229cf1b8db8",
+    "format" : "model",
+    "displayName" : "d10-red.usdz"
+  },
+  {
+    "libraryIdentifier" : "c13e253d563fc67600e9b63e4dfbce32",
+    "format" : "model",
+    "displayName" : "d10-teal.usdz"
+  },
+  {
+    "libraryIdentifier" : "dd156166d78318c8b4fdd32bfd1450f9",
+    "format" : "model",
+    "displayName" : "d10-white.usdz"
+  },
+  {
+    "libraryIdentifier" : "3e8eb8d21f73bbbb37d6dd77d6ea3ad0",
+    "format" : "model",
+    "displayName" : "d10-yellow.usdz"
+  },
+  {
+    "libraryIdentifier" : "1fb1bb8de409496f29db6bd4a7fd419b",
+    "format" : "model",
+    "displayName" : "d12-black.usdz"
+  },
+  {
+    "libraryIdentifier" : "9bdcffc312a2894aaf4b770790c35060",
+    "format" : "model",
+    "displayName" : "d12-blue.usdz"
+  },
+  {
+    "libraryIdentifier" : "d08f8d6773f06aa71f59530f7e6899c9",
+    "format" : "model",
+    "displayName" : "d12-green.usdz"
+  },
+  {
+    "libraryIdentifier" : "1348fe7ea0dca0d766d77b9c17e06ec0",
+    "format" : "model",
+    "displayName" : "d12-indigo.usdz"
+  },
+  {
+    "libraryIdentifier" : "b844743d7ff7673700c55fdbe5abae30",
+    "format" : "model",
+    "displayName" : "d12-orange.usdz"
+  },
+  {
+    "libraryIdentifier" : "60668f424c2f2c8cf956779ed15f6273",
+    "format" : "model",
+    "displayName" : "d12-pink.usdz"
+  },
+  {
+    "libraryIdentifier" : "b95d8f9f173f43454f049f8b148054d3",
+    "format" : "model",
+    "displayName" : "d12-purple.usdz"
+  },
+  {
+    "libraryIdentifier" : "2e31fd6140b53e934802f90387860a38",
+    "format" : "model",
+    "displayName" : "d12-red.usdz"
+  },
+  {
+    "libraryIdentifier" : "db9c4437eca25ee42b31b02ea0f591f8",
+    "format" : "model",
+    "displayName" : "d12-teal.usdz"
+  },
+  {
+    "libraryIdentifier" : "d94f8a1c9274b7a66a9c2dc3c827a578",
+    "format" : "model",
+    "displayName" : "d12-white.usdz"
+  },
+  {
+    "libraryIdentifier" : "60889fce850763ec30cf6ba9a04112e8",
+    "format" : "model",
+    "displayName" : "d12-yellow.usdz"
+  },
+  {
+    "libraryIdentifier" : "65fdafc65c93c81b7622928a446dbe73",
+    "format" : "model",
+    "displayName" : "d20-black.usdz"
+  },
+  {
+    "libraryIdentifier" : "ea288b6a8c84fe576b663b02f2829d55",
+    "format" : "model",
+    "displayName" : "d20-blue.usdz"
+  },
+  {
+    "libraryIdentifier" : "dd6abdd6701b9849993499aa72a77bee",
+    "format" : "model",
+    "displayName" : "d20-green.usdz"
+  },
+  {
+    "libraryIdentifier" : "b1db3c063f83c724352be19109bd09de",
+    "format" : "model",
+    "displayName" : "d20-indigo.usdz"
+  },
+  {
+    "libraryIdentifier" : "eda952d7fd07caddbb707d60418d7440",
+    "format" : "model",
+    "displayName" : "d20-orange.usdz"
+  },
+  {
+    "libraryIdentifier" : "119ab1b06ec0966fa8e268c34cca30aa",
+    "format" : "model",
+    "displayName" : "d20-pink.usdz"
+  },
+  {
+    "libraryIdentifier" : "a95e4c9d9f8d232ff8c08e291c6721e4",
+    "format" : "model",
+    "displayName" : "d20-purple.usdz"
+  },
+  {
+    "libraryIdentifier" : "45a993800bf34f2a14e64ccb3e9569d8",
+    "format" : "model",
+    "displayName" : "d20-red.usdz"
+  },
+  {
+    "libraryIdentifier" : "3934a04d02adbeb10647f6c2b305c665",
+    "format" : "model",
+    "displayName" : "d20-teal.usdz"
+  },
+  {
+    "libraryIdentifier" : "adc6b919d8a38a2046fddb64548aac17",
+    "format" : "model",
+    "displayName" : "d20-white.usdz"
+  },
+  {
+    "libraryIdentifier" : "23f88fe92632a53e4d26d32eff59fe7e",
+    "format" : "model",
+    "displayName" : "d20-yellow.usdz"
+  }
 ]
