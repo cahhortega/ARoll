@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PopUpComponent: View {
     @Binding var isOpen: Bool
-    var dataArray = ["4 faces", "6 faces", "8 faces", "10 faces", "12 faces", "20 faces"]
-    @State private var selectedDice = "4 faces"
+    var dataArray = ["4 sides", "6 sides", "8 sides", "10 sides", "12 sides", "20 sides"]
+    @AppStorage("number") var selectedDice: String = "4 sides"
     
     var body: some View {
         VStack {
@@ -31,6 +31,8 @@ struct PopUpComponent: View {
             Picker("Select the number of sides", selection: $selectedDice) {
                 ForEach(dataArray, id: \.self) {
                     Text($0)
+                    
+                    
                 }
             }
             Text("Dice Color")
@@ -43,19 +45,24 @@ struct PopUpComponent: View {
             VStack (alignment: .center) {
                 HStack(alignment: .center, spacing: 10) {
                     SquareColorComponent(color: .red) {
-                        print("Red")
+                        Dice.shared.colorDice = "red"
+                        print("red")
                     }
                     SquareColorComponent(color: .orange) {
-                        print("Orange")
+                        Dice.shared.colorDice = "orange"
+                        print("orange")
                     }
                     SquareColorComponent(color: .yellow) {
-                        print("Yellow")
+                        Dice.shared.colorDice = "yellow"
+                        print("yellow")
                     }
                     SquareColorComponent(color: .green) {
-                        print("Green")
+                        Dice.shared.colorDice = "green"
+                        print("green")
                     }
                     SquareColorComponent(color: .teal) {
-                        print("Light blue")
+                        Dice.shared.colorDice = "teal"
+                        print("teal")
                     }
                     
                 }
@@ -63,29 +70,28 @@ struct PopUpComponent: View {
                 HStack(alignment: .center, spacing: 10) {
                     
                     SquareColorComponent(color: .blue) {
-                        print("Blue")
+                        Dice.shared.colorDice = "blue"
+                        print("blue")
                     }
                     SquareColorComponent(color: .indigo) {
-                        print("Indigo")
+                        Dice.shared.colorDice = "indigo"
+                        print("indigo")
                     }
                     SquareColorComponent(color: .purple) {
-                        print("Purple")
+                        Dice.shared.colorDice = "purple"
+                        print("purple")
                     }
                     SquareColorComponent(color: .white) {
-                        print("White")
+                        Dice.shared.colorDice = "white"
+                        print("white")
                     }
                     SquareColorComponent(color: .black) {
-                        print("Black")
+                        Dice.shared.colorDice = "black"
+                        print("black")
                     }
-                    
                 }
-                
-                
             }
             .cornerRadius(5.0)
-            
-            
-            
             Button("Back") {
                 isOpen = false
             }

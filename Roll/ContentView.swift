@@ -125,7 +125,8 @@ struct ARViewContainer: UIViewRepresentable {
                 view.scene.anchors.append(anchor)
                 
                 // Adicionando o dado
-                let diceEntity = try! ModelEntity.loadModel(named: "Dice")
+                let number = UserDefaults().string(forKey: "number") ?? "4 faces"
+                let diceEntity = try! ModelEntity.loadModel(named: "d\(number)-\(Dice.shared.colorDice)" )
                 diceEntity.scale = [0.1, 0.1, 0.1]
                 diceEntity.position = focusEntity.position
                 

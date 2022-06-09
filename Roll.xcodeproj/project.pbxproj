@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0148DB828525ADF00B0869A /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0148DB728525ADF00B0869A /* Dice.swift */; };
 		A0FC3D08284F93C400E09C7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC3D07284F93C400E09C7A /* AppDelegate.swift */; };
 		A0FC3D0A284F93C400E09C7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC3D09284F93C400E09C7A /* ContentView.swift */; };
 		A0FC3D0C284F93C400E09C7A /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A0FC3D0B284F93C400E09C7A /* Experience.rcproject */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0148DB728525ADF00B0869A /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 		A0FC3D04284F93C400E09C7A /* Roll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0FC3D07284F93C400E09C7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0FC3D09284F93C400E09C7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				A0FC3D09284F93C400E09C7A /* ContentView.swift */,
 				A0FC3D1C284FCD7500E09C7A /* SquareColorComponent.swift */,
 				A0FC3D1E284FE2E500E09C7A /* PopUpComponent.swift */,
+				A0148DB728525ADF00B0869A /* Dice.swift */,
 				A0FC3D0B284F93C400E09C7A /* Experience.rcproject */,
 				A0FC3D0D284F93C600E09C7A /* Assets.xcassets */,
 				A0FC3D0F284F93C600E09C7A /* Preview Content */,
@@ -162,6 +165,7 @@
 				A0FC3D0A284F93C400E09C7A /* ContentView.swift in Sources */,
 				A0FC3D1F284FE2E500E09C7A /* PopUpComponent.swift in Sources */,
 				A0FC3D08284F93C400E09C7A /* AppDelegate.swift in Sources */,
+				A0148DB828525ADF00B0869A /* Dice.swift in Sources */,
 				A0FC3D0C284F93C400E09C7A /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
